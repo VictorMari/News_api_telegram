@@ -1,4 +1,4 @@
-//const axios = require('axios')
+// const axios = require('axios')
 // const url = 'http://checkip.amazonaws.com/';
 let response;
 
@@ -17,8 +17,6 @@ let response;
 exports.lambdaHandler = async (event, context) => {
     try {
         // const ret = await axios(url);
-        //let news = await ge
-
         response = {
             'statusCode': 200,
             'body': JSON.stringify({
@@ -26,7 +24,6 @@ exports.lambdaHandler = async (event, context) => {
                 // location: ret.data.trim()
             })
         }
-        
     } catch (err) {
         console.log(err);
         return err;
@@ -34,4 +31,3 @@ exports.lambdaHandler = async (event, context) => {
 
     return response
 };
-
