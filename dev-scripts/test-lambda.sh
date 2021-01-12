@@ -1,1 +1,1 @@
-curl -X POST -d "$(cat webhoo-payload.json)" http://localhost:3000/hello
+curl -X POST -d "$(cat ./webhook-payload.json)" http://localhost:3000/hello

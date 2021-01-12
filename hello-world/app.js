@@ -2,7 +2,7 @@ const axios = require('axios')
 // const url = 'http://checkip.amazonaws.com/';
 
 const botInfo = {
-    token: "bot1532789842:AAGBBaRy--GeFoKhthkFgXCCzVEtzz9xx2g"
+    token: `bot${process.env.Bot_token}`
 }
 
 const articles = {
@@ -97,8 +97,8 @@ exports.lambdaHandler = async (event, context) => {
 
 async function findNews(){
     let url = "https://newsapi.org/v2/everything?q=spain"
-    let token = "4ad1c1ebe9f544a180c0dbcd34ded6e0"
-
+    let token = process.env.news_token
+    console.log("token", token)
     let req = {
         url: url,
         method: "GET",
