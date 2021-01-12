@@ -67,11 +67,17 @@ let response;
  */
 exports.lambdaHandler = async (event, context) => {
     try {
+        console.log(event.body || "No body provided")
+        const body = JSON.parse(event.body)
+        let {text, chat} = body.message
         // const ret = await axios(url);
-        //let news = await findNews()
-        let formatedNews = formatNews(articles.articles)
         try{
-            await sendChatMessage(1415671867, formatedNews)
+            if (text === "/noticias"){
+                let news = await findNews()
+                // 1415671867
+                let formatedNews = formatNews(news.data.articles)
+                await sendChatMessage(chat.id, formatedNews)
+            }
         }
         catch (err){
             console.log(err.response)

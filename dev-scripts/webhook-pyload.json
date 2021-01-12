@@ -1,0 +1,21 @@
+{
+    "update_id": 502375106,
+    "message": {
+        "message_id": 27,
+        "from": {
+            "id": 1415671867,
+            "is_bot": false,
+            "first_name": "Victor",
+            "last_name": "Ml",
+            "language_code": "es"
+        },
+        "chat": {
+            "id": 1415671867,
+            "first_name": "Victor",
+            "last_name": "Ml",
+            "type": "private"
+        },
+        "date": 1610415740,
+        "text": "/noticias"
+    }
+}

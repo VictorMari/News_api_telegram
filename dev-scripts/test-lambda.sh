@@ -1,0 +1,1 @@
+curl -X POST -d "$(cat webhoo-payload.json)" http://localhost:3000/hello
